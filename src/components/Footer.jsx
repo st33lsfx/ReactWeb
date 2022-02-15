@@ -15,10 +15,10 @@ const Footer = () => {
         <a href="https://www.instagram.com/">
           <img src={instagram} className="instagram" alt="instagram" />
         </a>
-        <a href="http://www.facebook.com">
+        <a href="https://www.facebook.com/profile.php?id=100008319951155">
           <img src={facebook} className="facebook" alt="facebook" />
         </a>
-        <a href="http://github">
+        <a href="https://github.com/st33lsfx">
           <img src={github} className="github" alt="github" />
         </a>
       </div>

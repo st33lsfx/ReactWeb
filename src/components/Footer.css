@@ -1,0 +1,25 @@
+.footer {
+  position: relative;
+  top: 1em;
+}
+
+.footer p {
+  padding: 2em;
+  padding-bottom: 0.5em;
+}
+
+.link-logo img {
+  margin: 1em auto;
+  margin-left: 0.5em;
+  height: 2em;
+  width: 2.5em;
+  -webkit-transition: all 2s ease;
+  -moz-transition: all 2s ease;
+  -ms-transition: all 2s ease;
+  transition: all 2s ease;
+}
+
+.link-logo img:hover {
+    transform: scale(1.5);
+    /* transition-duration: 2s; */
+}

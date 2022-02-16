@@ -12,10 +12,14 @@ const Home = () => {
           <button className="ctverec"></button>
         </div>
         <div className="home">
-          <p>
-            <em>Vítejte na stránkách</em>
-          </p>
+          <h2>
+            <em>Vítejte na webu</em>
+          </h2>
           <br />
+          <p>
+            Stránky jsou stále ve vývoji proto se za vzniklé problémy omlouvám
+          </p>
+          <br/>
           <small>
             Stránky byli vytvořeny pomocí frameworku{" "}
             <a href="https://reactjs.org/">ReactJs</a>

@@ -32,10 +32,6 @@ const InputForm = () => {
     form.current.reset()
   }
 
-  const hadleChange = (e) => {
-      setInputVal(e.target.value)
-  }
-
   return (
     <div className="input-form">
       <form ref={form} onSubmit={sendEmail}>
@@ -46,8 +42,6 @@ const InputForm = () => {
         <input type="text" placeholder="number" name="number" />
         <br />
         <textarea
-          onChange={hadleChange}
-          value={inputVal}
           className="text-area"
           type="text"
           rows="10"
@@ -56,7 +50,7 @@ const InputForm = () => {
           name="message"
         ></textarea>
         <br />
-        <input className="button" type="submit" value="Odeslat" disabled={!inputVal} ></input>
+        <input className="button" type="submit" value="Odeslat" ></input>
       </form>
     </div>
   );

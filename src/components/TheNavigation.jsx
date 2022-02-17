@@ -9,26 +9,40 @@ const TheNavigation = () => {
   return (
     <div>
       <nav className="navigation">
-        <img src={logo} className="logo" alt="logo" />
+        <NavLink className="register" to="/register">
+          Register
+        </NavLink>
+        <NavLink className="login" to="/login">
+          Login
+        </NavLink>
 
-        <NavLink
-          className={({ isActive }) => (isActive ? "active" : "")}
-          to="/"
-        >
-          Home
-        </NavLink>
-        <NavLink
-          className={({ isActive }) => (isActive ? "active" : "")}
-          to="/contact"
-        >
-          Contact
-        </NavLink>
-        <NavLink
-          className={({ isActive }) => (isActive ? "active" : "")}
-          to="/about"
-        >
-          About
-        </NavLink>
+        <ul>
+          <img src={logo} className="logo" alt="logo" />
+          <li>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active" : "")}
+              to="/"
+            >
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active" : "")}
+              to="/contact"
+            >
+              Contact
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active" : "")}
+              to="/about"
+            >
+              About
+            </NavLink>
+          </li>
+        </ul>
       </nav>
     </div>
   );

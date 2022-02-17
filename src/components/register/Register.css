@@ -1,0 +1,46 @@
+.registerForm {
+  max-width: 700px;
+  margin: 2em;
+}
+
+.registerForm h2 {
+  margin: 1em;
+  margin-top: 2em;
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid grey;
+}
+
+.registerForm input {
+  width: 70%;
+  margin: 0.5em;
+  border: 1px solid black;
+  border-radius: 0.8em;
+  padding: 0.7em;
+  margin-bottom: 0.7em;
+  box-shadow: 0.5px 0.5px 10px 0.5px black;
+  text-align: center;
+}
+
+.registerButton {
+  width: 74%;
+  margin: 5px 0;
+  padding: 0.7em;
+  border: 1px solid black;
+  border-radius: 0.8em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 2em;
+}
+
+.registerButton:hover,
+.registerButton:focus {
+  background-color: #282c34;
+  color: #fff;
+  font-weight: bold;
+}
+
+.registeredLogo {
+  position: relative;
+  width: 3em;
+  top: 2em;
+}

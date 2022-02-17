@@ -6,7 +6,7 @@ import "./InputForm.css";
 
 const InputForm = () => {
 
-  const [inputVal, setInputVal] = useState('')
+
 
   const form = useRef();
 
@@ -33,8 +33,8 @@ const InputForm = () => {
   }
 
   return (
-    <div className="input-form">
-      <form ref={form} onSubmit={sendEmail}>
+    <div>
+      <form className="input-form" ref={form} onSubmit={sendEmail}>
         <input type="text" placeholder="name" name="name" />
         <br />
         <input type="email" placeholder="email" name="email" />
@@ -45,7 +45,7 @@ const InputForm = () => {
           className="text-area"
           type="text"
           rows="10"
-          cols="40"
+          cols="30"
           placeholder="Some text..."
           name="message"
         ></textarea>

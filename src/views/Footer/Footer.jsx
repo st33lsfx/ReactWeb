@@ -1,8 +1,8 @@
 import React from "react";
 
-import instagram from "../assets/instagram.svg";
-import facebook from "../assets/facebook.svg";
-import github from "../assets/github.svg";
+import instagram from "../../assets/instagram.svg";
+import facebook from "../../assets/facebook.svg";
+import github from "../../assets/github.svg";
 
 import "./Footer.css";
 

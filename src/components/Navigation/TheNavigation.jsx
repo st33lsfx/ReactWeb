@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-import logo from "../logo.svg";
+import logo from "../../assets/logo.svg";
 
 import "./TheNavigation.css";
 
@@ -40,6 +40,12 @@ const TheNavigation = () => {
               to="/about"
             >
               About
+            </NavLink>
+            <NavLink
+              className={({ isActive }) => (isActive ? "active" : "")}
+              to="/posts"
+            >
+              Posts
             </NavLink>
           </li>
         </ul>

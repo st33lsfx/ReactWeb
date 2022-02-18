@@ -4,11 +4,19 @@ nav {
   border-bottom: 0.01em solid grey;
 }
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 640px) {
   nav ul {
     width: 33%;
-    margin: auto;
+    margin: 0 auto;
     padding: 0;
+  }
+
+  nav ul li a {
+    display: block;
+  }
+
+  nav.navigation a {
+    position: relative;
   }
 
   .login {
@@ -37,7 +45,7 @@ nav ul li {
   display: inline-block;
 }
 nav ul li a {
-  display: block;
+  /* display: block; */
   padding: 15px;
   text-decoration: none;
   color: rgb(255, 255, 255);
@@ -54,9 +62,6 @@ nav ul li a:hover {
   color: gold;
 }
 
-nav.navigation ul li a {
-  position: relative;
-}
 nav.navigation ul li a:after {
   position: absolute;
   bottom: 0;

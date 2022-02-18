@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import InputForm from '../components/InputForm'
+import InputForm from '../../components/InputForm/InputForm'
 
 import "./Contact.css";
-import phone from "../assets/phone.svg";
-import email from "../assets/email.svg";
+import phone from "../../assets/phone.svg";
+import email from "../../assets/email.svg";
 
 const Contact = () => {
   return (

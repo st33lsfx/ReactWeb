@@ -44,3 +44,9 @@
   width: 3em;
   top: 2em;
 }
+
+.messageError {
+  display: block;
+  font-size: 12px;
+  color: rgb(252, 95, 95);
+}

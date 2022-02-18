@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import validator from "validator";
 
 import "./Register.css";
 
@@ -14,6 +15,8 @@ const Register = () => {
     password2: "",
   });
 
+  const [messageError, setMessageError] = useState('')
+  const [passCoincides, setPassCoincides] = useState('')
   const [record, setRecord] = useState([])
 
   const handleInput = (e) => {
@@ -29,9 +32,21 @@ const Register = () => {
     const newRecord = { ...userRegister, id: new Date().getTime().toString()}
 
     setRecord([...record, newRecord ])
-    console.log(newRecord)
+    // console.log(newRecord)
 
     setUserRegister({firstName:'', lastName:'', username:'', email:'', password1:'', password2:''})
+
+    if(userRegister.password1.length <= 5) {
+      setMessageError("Heslo musí mít minimálně 6 znaků")
+    }else{
+      setMessageError('')
+    }
+
+    if(userRegister.password1 !== userRegister.password2) {
+      setPassCoincides("hesla se neshodují")
+    }else{
+      setPassCoincides("")
+    }
   };
 
   return (
@@ -88,7 +103,7 @@ const Register = () => {
           placeholder="Password"
           id="password1"
         ></input>
-        <br />
+        <label className="messageError">{messageError}</label>
         <input
           type="password"
           value={userRegister.password2}
@@ -97,6 +112,7 @@ const Register = () => {
           placeholder="Password"
           id="úassword2"
         ></input>
+        <label className="messageError">{passCoincides}</label>
         <br />
         <button
           className="registerButton"

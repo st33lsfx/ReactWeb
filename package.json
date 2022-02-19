@@ -8,8 +8,14 @@
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.26.0",
+    "concurrently": "^7.0.0",
+    "cors": "^2.8.5",
     "emailjs-com": "^3.2.0",
+    "express": "^4.17.3",
+    "joi": "^17.6.0",
     "lodash": "^4.17.21",
+    "mongoose": "^6.2.2",
+    "mongoose-dummy": "^1.0.8",
     "react": "^17.0.2",
     "react-color": "^2.19.3",
     "react-color-picker": "^4.0.2",
@@ -45,6 +51,7 @@
     ]
   },
   "devDependencies": {
-    "hsts": "^2.2.0"
+    "hsts": "^2.2.0",
+    "nodemon": "^2.0.15"
   }
 }

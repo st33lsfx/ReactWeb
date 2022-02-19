@@ -6,22 +6,26 @@
     max-width: 700px;
     margin: 3em;
     margin-bottom: 0;
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: 1px;
 }
 
 .post-input textarea {
     border: 1px solid black;
     border-radius: 0.5em;
     border-collapse: collapse;
-    box-shadow: 3px 3px 7px 2px black;
+    box-shadow: 5px 7px 18px 5px rgb(31, 30, 30);
 }
 
 .post-item {
     width: 55%;
     margin: 2em auto;
-    padding: 2em;
+    padding: 0.5em;
     border: 1px solid black;
     border-radius: 0.5em;
     background-color: rgba(0, 0, 255, 0.692);;
+    box-shadow: 5px 7px 18px 5px rgb(31, 30, 30);
 }
 
 .postButton {
@@ -30,7 +34,7 @@
     padding: 0.7em;
     border: 1px solid black;
     border-radius: 0.8em;
-    box-shadow: 3px 3px 7px 2px black;
+    box-shadow: 5px 7px 18px 5px rgb(31, 30, 30);
     font-weight: bold;
     cursor: pointer;
     margin-bottom: 2em;
@@ -49,7 +53,7 @@
     }
 
     .post-item {
-        padding: 2em 4em;
+        padding: 1.3em 4em;
     }
 }
 

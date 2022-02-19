@@ -62,6 +62,10 @@ nav ul li a:hover {
   color: gold;
 }
 
+nav.navigation a {
+  position: relative;
+}
+
 nav.navigation ul li a:after {
   position: absolute;
   bottom: 0;

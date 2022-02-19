@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { SliderPicker } from "react-color";
 
 import "./Posts.css";
 import "react-color-picker/index.css";
+import axios from "axios"
 
 const Posts = () => {
   const [newPostTitle, setNewPostTitle] = useState("");
   const [newPostColor, setNewPostColor] = useState("blue");
-
   const [posts, setPosts] = useState([]);
 
   // === Přidání nového posts ===
@@ -16,10 +16,12 @@ const Posts = () => {
 
     // pokud je newPostTitle vetší než 0 odešle se.
     if (newPostTitle.length > 0) {
+      
       setPosts([
         { title: newPostTitle, color: newPostColor.background },
         ...posts,
       ]);
+            
       // po odeslání se resetuje input
       setNewPostTitle("");
     }
@@ -55,6 +57,7 @@ const Posts = () => {
             placeholder="Some text..."
             value={newPostTitle}
             onChange={onTitleChange}
+            name="message"
           ></textarea>
           <br />
           <button className="postButton" onClick={onAddPost}>
@@ -67,6 +70,8 @@ const Posts = () => {
               onChange={onColorChange}
             />
           </div>
+
+          
 
           {posts.map((post, index) => (
             <div key={index}>

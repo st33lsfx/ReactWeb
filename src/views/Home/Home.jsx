@@ -18,7 +18,7 @@ const Home = () => {
           <br />
           <br/>
           <small>
-            Stránky byli vytvořeny pomocí frameworku{" "}
+            Stránky byly vytvořeny pomocí frameworku{" "}
             <a href="https://reactjs.org/">ReactJs</a>
           </small>
         </div>

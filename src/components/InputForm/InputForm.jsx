@@ -5,7 +5,11 @@ import emailjs from "@emailjs/browser";
 import "./InputForm.css";
 
 const InputForm = () => {
-  const [sendEmail, setSendEmail] = useState("");
+  const [sendEmail, setSendEmail] = useState({
+    name: "",
+    email: "",
+    subject: ""
+  });
 
   const form = useRef();
 
@@ -17,7 +21,8 @@ const InputForm = () => {
     console.log(email);
     
 
-    if (sendEmail.length > 0 && name.length > 3 && email === true ) {
+    if (sendEmail.subject.length > 0 && name.length > 3 && email === true ) {
+      
       emailjs
         .sendForm(
           "Gmail",
@@ -35,35 +40,23 @@ const InputForm = () => {
         )
 
       form.current.reset();
-      setSendEmail("");
+      setSendEmail({name: "", email:"", subject:""})
     }
   };
 
   const onInputTitle = (e) => {
-    // console.log(e.target.value)
+    console.log(e.target.value)
     setSendEmail(e.target.value)
-
   }
 
   return (
     <div>
       <form className="input-form" ref={form} onSubmit={onSendEmail}>
-        <input type="text" placeholder="name" name="name" />
+        <input type="text" placeholder="name" name="name" onChange={onInputTitle} value={sendEmail.name}/>
         <br />
-        <input type="email" placeholder="email" name="email" />
+        <input type="email" placeholder="email" name="email" onChange={onInputTitle} value={sendEmail.email} />
         <br />
-        <input type="text" placeholder="subject" name="subject" />
-        <br />
-        <textarea
-          className="text-area"
-          onChange={onInputTitle}
-          value={sendEmail}
-          type="text"
-          rows="10"
-          cols="30"
-          placeholder="Some text..."
-          name="message"
-        ></textarea>
+        <input type="text" placeholder="subject" name="subject" onChange={onInputTitle} value={sendEmail.subject}/>
         <br />
         <input className="button" type="submit" value="Odeslat"></input>
       </form>
